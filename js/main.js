@@ -5,15 +5,26 @@ var vm = {
     totalPages:ko.observable(),
     totalItems:ko.observable(),
     editable: null,
-    currentUser: ko.observableArray([]),
+    currentUser: {
+        photo: ko.observable(),
+        id: ko.observable(),
+        fullName: ko.observable(),
+        email: ko.observable(),
+        birthday: ko.observable(),
+        profession: ko.observable(),
+        address: ko.observable(),
+        country: ko.observable(),
+        shortInfo: ko.observable(),
+        fullInfo: ko.observable(),
+    },
     userList: ko.observableArray([]),
     loadUserList: function () {
         $.getJSON("api/users/"+vm.page()+"/"+vm.itemsInPage(), function (userList) {
             vm.userList(userList.data);
-            vm.page(userList.page);
-            vm.totalPages(userList.totalPages);
-            vm.totalItems(userList.totalItems);
-        } );
+        vm.page(userList.page);
+        vm.totalPages(userList.totalPages);
+        vm.totalItems(userList.totalItems);
+    } );
     },
     countryList: ko.observableArray([]),
     loadCountryList: function () {
@@ -68,20 +79,21 @@ var vm = {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function(e) {
-            vm.currentUser().photo=e.target.result;
+            vm.currentUser.photo(e.target.result);
             };
         reader.readAsDataURL(input.files[0]);
         }
      },
     removeUser: function () {
-        $.ajax({url:"api/users/"+vm.currentUser().id,
+        $.ajax({url:"api/users/"+vm.currentUser.id(),
             type:"delete",
             success: vm.lastPage
         });
         vm.closeForm();
     },
     pressCreateBtn:function() {
-        vm.currentUser().photo="img/400x400.gif";
+        vm.closeForm();
+        vm.currentUser.photo("img/400x400.gif");
         vm.openingForm();
     },
     openingForm: function () {
@@ -90,7 +102,7 @@ var vm = {
     closeForm: function () {
         vm.openForm(false);
         vm.editable= null;
-        vm.currentUser([]);
+        vm.fillUser({});
     },
     sendForm:function () {
         if (vm.editable){
@@ -117,17 +129,26 @@ var vm = {
     editUser: function (user) {
         vm.openingForm();
         vm.editable = user;
-        vm.currentUser(user);
+        vm.fillUser(user);
        },
     
     fillUser:function (user) {
-        
+        vm.currentUser.photo(user.photo),
+        vm.currentUser.id(user.id),
+        vm.currentUser.fullName(user.fullName),
+        vm.currentUser.email(user.email),
+        vm.currentUser.birthday(user.birthday),
+        vm.currentUser.profession(user.profession),
+        vm.currentUser.address(user.address),
+        vm.currentUser.country(user.country),
+        vm.currentUser.shortInfo(user.shortInfo),
+        vm.currentUser.fullInfo(user.fullInfo)
     }
 
     };
-vm.currentUser.subscribe(function (value) {
-   console.log(value);
-});
+// vm.currentUser.subscribe(function (value) {
+//    console.log(value);
+// });
 ko.applyBindings(vm);
 vm.loadUserList();
 vm.loadCountryList();
