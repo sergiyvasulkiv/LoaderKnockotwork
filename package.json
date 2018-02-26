@@ -1,0 +1,30 @@
+{
+  "name": "demo-simple-blog",
+  "version": "1.0.0",
+  "description": "Simple server which can handle simple blog management workflow.",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node --presets es2015 server.js"
+  },
+  "author": "Andrew Kondratiuk <x.alantoo@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "angular-toastr": "^2.1.1",
+    "babel-cli": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "express": "^4.14.0",
+    "jquery": "^3.2.1",
+    "knockout": "^3.4.2",
+    "moment": "^2.20.1",
+    "node-static": "^0.7.8",
+    "requirejs": "^2.3.4",
+    "toastr": "^2.1.2",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "tinymce": "^4.6.4"
+  }
+}

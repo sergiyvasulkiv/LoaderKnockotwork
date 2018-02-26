@@ -1,0 +1,44 @@
+.glyphicon--plusUserStyle {
+  color: blue;
+  font-size: 12px;
+}
+/* ---------- list ---------- */
+.user__photo {
+  width: 80px;
+  height: 80px;
+}
+.user__photo--form {
+  width: 400px;
+  height: 400px;
+}
+.user__list {
+  margin: 0;
+  padding: 0;
+}
+.li__style {
+  list-style: none;
+  padding: 10px;
+  transition: .2s;
+}
+.li__bg {
+  background-color: blanchedalmond;
+}
+/* ---------- pagination ---------- */
+.pagination__link--style {
+  background: cadetblue !important;
+}
+/* ---------- form ---------- */
+.form {
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 10px;
+}
+.form__photoBlock {
+  text-align: center;
+}
+.input-group--style {
+  padding-bottom: 17px;
+}
+.textarea__style {
+  padding-top: 15px;
+}

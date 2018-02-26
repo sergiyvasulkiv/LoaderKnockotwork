@@ -1,0 +1,52 @@
+.page-header--create {
+  font-size: 18px;
+  line-height: 36px;
+}
+/* ---------- panel ---------- */
+.panel-default--style {
+  box-shadow: 2px 2px 3px #b8b894 !important;
+}
+.panel-body--style {
+  background: #ffffcc;
+  margin-bottom: 15px;
+  text-align: center;
+  height: 100px;
+  overflow: hidden;
+}
+.panel-heading--style {
+  text-align: center;
+}
+.panel-heading--text {
+  font-weight: 600;
+  font-size: 18px;
+}
+.panel-body--poster {
+  width: 100%;
+  height: 100px;
+}
+.panel-body--text {
+  line-height: 100px;
+}
+/* ---------- pagination ---------- */
+.pagination-list--style {
+  margin: 0 !important;
+  text-align: center;
+  width: 100%;
+  font-size: 0;
+}
+.pagination-list__items {
+  display: inline-block !important;
+  font-size: 15px;
+}
+.adminListOfArticles {
+  display: block;
+}
+.adminEditArticlePage {
+  display: none;
+}
+.articleListStyle {
+  background-color: #ffffb3;
+}
+.hiddenArticle {
+  display: none;
+}

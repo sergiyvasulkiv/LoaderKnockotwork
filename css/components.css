@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+/* ---------- logo ---------- */
+.header__logo {
+  text-transform: uppercase;
+  padding: 5px 15px 5px 15px !important;
+}
+.logoImg {
+  height: 40px;
+  width: 100px;
+}
+.text__header {
+  font-size: 16px;
+  font-style: italic;
+}
+/* ---------- avatar ---------- */
+.header__photoBlock {
+  margin-top: 5px;
+}
+.header-img-thumbnail--style {
+  height: 40px;
+  width: 40px;
+  padding: 0 !important;
+}
+/* ---------- main title ---------- */
+.page-header--title {
+  font-weight: 600;
+  margin: 0;
+}
+/* ---------- glyphicon-pagination ---------- */
+.glyphicon-pagination--style {
+  font-size: 12px;
+}

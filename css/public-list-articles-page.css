@@ -1,0 +1,104 @@
+body {
+  background-image: url("../img/background_articles.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page__header {
+  border-bottom: 2px solid #262626;
+  margin-bottom: 20px;
+}
+.main__title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 56px;
+  color: #6699ff;
+  margin: 0;
+  padding: 20px 0 10px 0;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px black;
+}
+/* ---------- panel ----------*/
+.panel-default--style {
+  border-radius: 7px !important;
+  width: 49% !important;
+  margin-right: 10px;
+  padding: 0 !important;
+  box-shadow: 2px 2px 10px #6699ff !important;
+  transition: .2s;
+}
+.panel-default--style:hover {
+  box-shadow: 2px 2px 10px #0066ff !important;
+}
+.panel-default--style:hover .media--style {
+  visibility: visible;
+}
+.panel-title--style {
+  font-weight: 600;
+  font-size: 25px !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.panel-body--style {
+  height: 100px;
+  overflow: hidden;
+  text-overflow: clip;
+  margin-bottom: 15px;
+}
+.panel-footer--style {
+  height: 60px;
+}
+/* ---------- media ----------*/
+.media--style {
+  visibility: hidden;
+  padding: 0;
+}
+.media-body--style {
+  text-align: justify;
+  text-indent: 20px;
+}
+.media-body--style:first-letter {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a75ff;
+}
+.media-body--footer {
+  margin-bottom: -5px !important;
+}
+.media-object--style {
+  width: 40px;
+  height: 40px;
+}
+.media-object--article {
+  width: 150px;
+  height: 100px;
+}
+/* ---------- panel-footer items ----------*/
+.panel-footer--itemsBlock {
+  display: inline-block;
+  padding-right: 5px;
+}
+.panel-footer__heart:hover {
+  text-decoration: none;
+  color: red;
+}
+.panel-footer__heart:active,
+.panel-footer__heart:focus,
+.panel-footer__heart:visited {
+  text-decoration: none;
+}
+.glyphicon-footer--style {
+  color: black;
+}
+.btn-info--style {
+  margin-left: 15px;
+}
+/* ---------- pagination ----------*/
+.pagination--list {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+.pagination--listItems {
+  display: inline-block !important;
+  font-size: 15px;
+}
